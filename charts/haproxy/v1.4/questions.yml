@@ -1,0 +1,87 @@
+categories:
+- Ingress
+- Proxy
+- Loadbalancer
+labels:
+  io.cattle.role: project
+  io.rancher.certified: partner
+questions:
+- variable: controller.image 
+  default: true
+  description: "Use default Docker image"
+  label: Use Default Image
+  type: boolean
+  group: "General Settings"
+  show_subquestion_if: false
+  subquestions:
+  - variable: controller.image.tag
+    default: "1.4.2"
+    description: "HAProxy Ingress Controller Tag"
+    type: string
+    label: HAProxy Ingress Controller Tag
+- variable: controller.kind
+  type: enum
+  options:
+    - "DaemonSet"
+    - "Deployment"
+  default: "Deployment"
+  description: "Deployment Type"
+  label: Deployment Type
+  group: "General Settings"
+- variable: controller.service.type
+  type: enum
+  options:
+    - "LoadBalancer"
+    - "NodePort"
+  default: "LoadBalancer"
+  description: "Service Type for HAProxy Ingress Controller"
+  label: Service Type
+  group: "General Settings"
+- variable: rbac.create
+  default: true
+  description: "Enable RBAC"
+  label: RBAC
+  type: boolean
+  group: "General Settings"
+- variable: tls.enabled
+  type: boolean
+  default: true
+  description: "Enable TLS"
+  label: TLS
+  show_subquestion_if: true
+  group: "TLS"
+  subquestions:
+  - variable: controller.config.ssl-redirect
+    type: boolean
+    default: false
+    description: "Force HTTP to HTTPS"
+    label: HTTP to HTTPS
+- variable: dashboard.enabled
+  default: false
+  description: "Use HAProxy Enterprise"
+  label: Enable
+  type: boolean
+  group: "HAProxy Enterprise"
+  show_subquestion_if: true
+  subquestions:
+  - variable: controller.imageCredentials.registry
+    type: string
+    default: "kubernetes-registry.haproxy.com"
+    description: "HAProxy Enterprise Registtry"
+    label: Registry
+  - variable: controller.image.repository
+    type: string
+    default: "kubernetes-registry.haproxy.com/hapee-ingress"
+    description: "HAProxy Enterprise Registry"
+    label: Repository
+  - variable: controller.imageCredentials.username
+    type: string
+    default: "MYUSERNAME"
+    description: "HAProxy Enterprise Username"
+    label: Username
+  - variable: controller.imageCredentials.password
+    type: string
+    default: "MYPASSWORD"
+    description: "HAProxy Enterprise Password"
+    label: Password 
+
