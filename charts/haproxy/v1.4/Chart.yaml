@@ -25,11 +25,11 @@ sources:
   - https://github.com/haproxytech/kubernetes-ingress
 icon: http://www.haproxy.org/img/HAProxyCommunityEdition_60px.png
 maintainers:
-  - name: Moemen Mhedhbi
+  - name: Mo3m3n 
     email: mmhedhbi@haproxy.com
-  - name: Baptiste Assmann
+  - name: bedis
     email: bassmann@haproxy.com
-  - name: Dinko Korunic
+  - name: dkorunic
     email: dkorunic@haproxy.com
 appVersion: 1.4.2
 tillerVersion: ">=2.9.0"
