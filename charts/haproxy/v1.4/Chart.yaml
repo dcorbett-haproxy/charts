@@ -25,7 +25,7 @@ sources:
   - https://github.com/haproxytech/kubernetes-ingress
 icon: http://www.haproxy.org/img/HAProxyCommunityEdition_60px.png
 maintainers:
-  - name: Mo3m3n 
+  - name: Mo3m3n
     email: mmhedhbi@haproxy.com
   - name: bedis
     email: bassmann@haproxy.com
