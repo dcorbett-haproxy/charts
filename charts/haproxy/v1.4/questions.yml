@@ -8,10 +8,9 @@ labels:
 questions:
 - variable: controller.image.repository
   default: "haproxytech/kubernetes-ingress"
-  description: "Controller Image Repository"
-  label: Use Default Repository
+  description: "Default Repo"
   type: string
-  group: "General Settings" 
+  label: Repository
 - variable: controller.image 
   default: true
   description: "Use default Docker image"
