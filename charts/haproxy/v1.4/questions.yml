@@ -6,12 +6,12 @@ labels:
   io.cattle.role: project
   io.rancher.certified: partner
 questions:
-- variable: controller.image 
+- variable: imageDefault
   default: true
   description: "Use default Docker image"
   label: Use Default Image
   type: boolean
-  group: "General Settings"
+  group: "Settings"
   show_subquestion_if: false
   subquestions:
   - variable: controller.image.tag
@@ -27,7 +27,7 @@ questions:
   default: "Deployment"
   description: "Deployment Type"
   label: Deployment Type
-  group: "General Settings"
+  group: "Settings"
 - variable: controller.service.type
   type: enum
   options:
@@ -36,27 +36,14 @@ questions:
   default: "LoadBalancer"
   description: "Service Type for HAProxy Ingress Controller"
   label: Service Type
-  group: "General Settings"
+  group: "Settings"
 - variable: rbac.create
   default: true
   description: "Enable RBAC"
   label: RBAC
   type: boolean
-  group: "General Settings"
-- variable: tls.enabled
-  type: boolean
-  default: true
-  description: "Enable TLS"
-  label: TLS
-  show_subquestion_if: true
-  group: "TLS"
-  subquestions:
-  - variable: controller.config.ssl-redirect
-    type: boolean
-    default: false
-    description: "Force HTTP to HTTPS"
-    label: HTTP to HTTPS
-- variable: dashboard.enabled
+  group: "Settings"
+- variable: enableEnterprise
   default: false
   description: "Use HAProxy Enterprise"
   label: Enable

@@ -23,7 +23,7 @@ keywords:
 home: https://github.com/haproxytech/helm-charts/tree/master/kubernetes-ingress
 sources:
   - https://github.com/haproxytech/kubernetes-ingress
-icon: http://www.haproxy.org/img/HAProxyCommunityEdition_60px.png
+icon: file://../haproxy-logo.png
 maintainers:
   - name: Mo3m3n
     email: mmhedhbi@haproxy.com
