@@ -10,6 +10,7 @@ questions:
   default: "haproxytech/kubernetes-ingress"
   description: "Controller Image Repository"
   label: Use Default Repository
+  type: string
   group: "General Settings" 
 - variable: controller.image 
   default: true
