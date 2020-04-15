@@ -11,7 +11,7 @@ questions:
   description: "Use default Docker image"
   label: Use Default Image
   type: boolean
-  group: "General Settings"
+  group: "Settings"
   show_subquestion_if: false
   subquestions:
   - variable: controller.image.tag
@@ -27,7 +27,7 @@ questions:
   default: "Deployment"
   description: "Deployment Type"
   label: Deployment Type
-  group: "General Settings"
+  group: "Settings"
 - variable: controller.service.type
   type: enum
   options:
@@ -36,13 +36,13 @@ questions:
   default: "LoadBalancer"
   description: "Service Type for HAProxy Ingress Controller"
   label: Service Type
-  group: "General Settings"
+  group: "Settings"
 - variable: rbac.create
   default: true
   description: "Enable RBAC"
   label: RBAC
   type: boolean
-  group: "General Settings"
+  group: "Settings"
 - variable: enableEnterprise
   default: false
   description: "Use HAProxy Enterprise"
