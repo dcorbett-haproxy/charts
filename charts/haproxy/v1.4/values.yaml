@@ -46,7 +46,7 @@ controller:
   name: controller
   image:
     repository: haproxytech/kubernetes-ingress    # can be changed to use CE or EE Controller images
-    tag: "1.4.2"
+    tag: "{{ .Chart.AppVersion }}"
     pullPolicy: IfNotPresent
 
   ## Deployment or DaemonSet pod mode
