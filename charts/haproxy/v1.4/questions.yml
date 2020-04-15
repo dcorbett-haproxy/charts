@@ -6,12 +6,7 @@ labels:
   io.cattle.role: project
   io.rancher.certified: partner
 questions:
-- variable: controller.image.repository
-  default: "haproxytech/kubernetes-ingress"
-  description: "Default Repo"
-  type: string
-  label: Repository
-- variable: controller.image 
+- variable: imageDefault
   default: true
   description: "Use default Docker image"
   label: Use Default Image
