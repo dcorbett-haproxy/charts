@@ -43,20 +43,7 @@ questions:
   label: RBAC
   type: boolean
   group: "General Settings"
-- variable: tls.enabled
-  type: boolean
-  default: true
-  description: "Enable TLS"
-  label: TLS
-  show_subquestion_if: true
-  group: "TLS"
-  subquestions:
-  - variable: controller.config.ssl-redirect
-    type: boolean
-    default: false
-    description: "Force HTTP to HTTPS"
-    label: HTTP to HTTPS
-- variable: dashboard.enabled
+- variable: enableEnterprise
   default: false
   description: "Use HAProxy Enterprise"
   label: Enable
